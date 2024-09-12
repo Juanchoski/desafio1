@@ -1,0 +1,4 @@
+En estos momentos nos encontramos analizando muy bien lo que nos pide el desafio,
+bucando una forma de estructurar el problema para asi poder implementar una
+estructura de datos para la resolucion del problema. Para ello se estudia a profundidad los datos que nos 
+arroja el arduino para asi manejar esos datos.
