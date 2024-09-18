@@ -99,6 +99,8 @@ void loop() {
     posicionA = 0;
     dimension = 10;
     maxArreglo = false;
+    delete[] grafica;
+    grafica = new int[dimension];
     ciclos = 0;
   }
   
@@ -126,7 +128,7 @@ void tipoOnda(int* grafica, unsigned int dimension) {
     return;
   } 	
   
-  
+  //para senoidal si no fue cuadrada
   float amplitudEsperada = (valorMaximo - valorMinimo) / 2.0;
   float frecuenciaEsperada = frecuencia;
   int puntos = dimension;
@@ -149,7 +151,7 @@ void tipoOnda(int* grafica, unsigned int dimension) {
   }
   
   
-  
+  //para triangular si no fue cuadrada ni triangular
   if (dimension < 3) esTriangular = false;
   bool subiendo = true;
   int diferencia = valor2 - valor1;
@@ -176,7 +178,7 @@ void tipoOnda(int* grafica, unsigned int dimension) {
     return;
 
   }
-  
+  //si no fue ningun tipo de onda
   lcd.print("No reconocida");
   return;
   
